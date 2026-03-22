@@ -1,12 +1,12 @@
 const WebSocket = require('ws');
 const { ethers } = require('ethers');
 
-const PK_A = '0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80';
+const PK_A = '0x<YOUR_PRIVATE_KEY_HERE>';
 const wallet = new ethers.Wallet(PK_A);
 const AGENT_ID = wallet.address; // 0xf39F...
 
-// Known address of Agent B
-const TARGET_ID = '0x70997970C51812dc3A010C7d01b50e0d17dc79C8';
+// The address of Agent B we want to notify
+const TARGET_ID = '0x<TARGET_AGENT_ADDRESS_HERE>';
 
 async function start() {
     console.log(`🔐 [Agent-A] Signing login payload for identity: ${AGENT_ID}...`);

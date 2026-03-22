@@ -2,12 +2,12 @@ const WebSocket = require('ws');
 const axios = require('axios');
 const { ethers } = require('ethers');
 
-const PK_B = '0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d';
+const PK_B = '0x<YOUR_PRIVATE_KEY_HERE>';
 const wallet = new ethers.Wallet(PK_B);
 const AGENT_ID = wallet.address; // 0x7099...
 
-const TARGET_ID = '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266'; // Address A
-const OPENROUTER_KEY = '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';
+const TARGET_ID = '0x<TARGET_AGENT_ADDRESS_HERE>'; // Address A
+const OPENROUTER_KEY = 'sk-or-v1-<YOUR_OPENROUTER_KEY_HERE>';
 
 async function start() {
     console.log(`🔐 [Agent-B] Signing login payload for identity: ${AGENT_ID}...`);
